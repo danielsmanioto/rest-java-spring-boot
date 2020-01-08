@@ -13,10 +13,12 @@ gradle clean bootRun
 
 # teste curl
 
-curl localhost:8080/api/message 
-<br>
-curl -d '{ "message": "DANIEL"}' -H "Content-Type: application/json" -X PUT localhost:8080/api/message
+curl http://localhost:8080/person/2
 
-# docker
+<br>
+curl -d '{ "message": "DANIEL"}' -H "Content-Type: application/json" -X PUT localhost:8080/message
+
+# build docker
 
 docker-compose build
+docker-compose up
